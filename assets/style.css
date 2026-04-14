@@ -1,46 +1,23 @@
 body {
-    font-family: "Inter", sans-serif;
-    font-size: 20px;
+    font-family: "M PLUS 2c", Arial, sans-serif;
     line-height: 1.6;
-    padding: 30px;
-    background-color: #f5f7fa;
+    background-color: #000;
 }
 
-pre,
-code {
-    font-family: "Roboto Mono", monospace;
-}
-
-.blog {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-figure {
+.content {
+    background-color: #121212;
+    color: #fff;
     max-width: 1000px;
+    padding: 30px;
     margin: 0 auto;
 }
 
-img {
-    width: 100%;
-    border-radius: 20px;
+pre {
+    border-radius: 10px;
 }
 
-code {
-    background-color: #d1f0f0;
-    padding: 2px;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-figcaption {
-    margin-top: 10px;
-    text-align: center;
-    font-weight: 300;
-}
-
-pre code {
-    display: block;
-    background-color: #d1f0f0;
+ul,
+ol {
+    list-style: none;
+    padding-left: 40px;
 }
