@@ -1,0 +1,199 @@
+/* Bài 1: Combinators */
+
+.main-nav {
+    a {
+        color: #1d4ed8;
+    }
+
+    & > ul > li > a {
+        background-color: #f1f5f9;
+    }
+}
+
+h2 + p {
+    color: #64748b;
+}
+
+h2 ~ p {
+  color: #0f172a;
+}
+
+.post-meta {
+    .author a {
+        color: #f97316;
+    }
+}
+
+/* Bài 2: CSS Nesting */
+
+.post {
+    background-color: white;
+
+    & .post-title {
+        color: #0f172a;
+    }
+
+    &:hover {
+        background-color: #f8fafc;
+    }
+
+    &.featured {
+        background-color: #fefce8;
+    }
+
+    &:hover .post-title {
+        color: #2563eb;
+    }
+}
+
+/* Bài 3: Interactive Pseudo-classes */
+
+.post-content {
+    a:link {
+        color: #2563eb;
+    }
+
+    a:visited {
+        color: #9333ea;
+    }
+
+    a:hover {
+        color: #1e40af;
+    }
+
+    a:active {
+        color: #1e3a8a;
+    }
+}
+
+.btn {
+    &.btn-primary {
+        background-color: #2563eb;
+        color: white;
+    }
+
+    &:hover {
+        background-color: #3b82f6;
+    }
+
+    &:active {
+        background-color: #1d4ed8;
+    }
+
+    &:disabled {
+        background-color: #94a3b8;
+        color: #cbd5e1;
+    }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"] {
+  &:focus {
+    background-color: #eff6ff;
+  }
+}
+
+/* Bài 4: Structural Pseudo-classes */
+.comparison-table {
+    tbody tr:nth-child(2n+1){
+        background-color: #f8fafc;
+    }
+
+    tbody tr:nth-child(2n){
+        background-color: white;
+    }
+
+    thead tr {
+        background-color: #0f172a;
+        color: white;
+    }
+
+    tbody tr:last-child {
+        background-color: #dbeafe;
+    }
+}
+
+.steps {
+    li:first-child {
+        color: #16a34a;
+    }
+
+    li:last-child {
+        color: #dc2626;
+    }
+
+    li:nth-child(3) {
+        background-color: #fef3c7;
+    }    
+}
+
+.sidebar {
+    .widget:not(:last-child){
+        background-color: white;
+    }
+}
+
+/* Bài 5: Pseudo-elements */
+.post-content {
+    .lead {
+        &::first-line {
+            color: #0f172a;
+        }
+
+        &::first-letter {
+            color: #2563eb;
+        }
+    }
+
+    .quote::before {
+        content: '"';
+        color: #cbd5e1;
+    }
+
+    .steps li::marker {
+        color: #2563eb;
+    }
+
+    & ::selection {
+        background-color: #bfdbfe;
+        color: #0f172a;
+    }
+}
+
+.badge::before {
+        content: "";
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin-right: 6px;
+        background-color: #ef4444;
+        border-radius: 50%;
+}
+
+/* Bài 6: Attribute Selectors */
+input[required] {
+    background-color: #fffbeb;
+}
+
+a[href^="https://"] {
+    color: #2563eb;
+}
+
+a[href$=".pdf"] {
+    color: #ea580c;
+}
+
+[class~="btn" ] {
+    background-color: #e2e8f0;
+}
+
+[lang^="vi"] {
+    color: #0f172a;
+}
+
+.comparison-table {
+    tr[data-priority="high"] {
+        background-color: #fee2e2; 
+    }
+}
