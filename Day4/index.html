@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trung tâm cấu hình giao diện (Demo)</title>
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+    </head>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-size: 1.6rem;
+        }
+        /* Main */
+        main {
+            background-color: #f0f9ff;
+            color: #111827;
+        }
+        /* Header */
+        .header {
+            margin: 0 auto;
+            width: 100rem;
+            height: 6rem;
+            background-color: #f98000;
+        }
+        h1 {
+            text-align: center;
+            font-size: 4rem;
+            font-weight: bold;
+            color: #f9fafb;
+            line-height: 6rem;
+        }
+
+        /* Content */
+        .control {
+            padding: 0 2rem 2rem;
+
+            p {
+                font-size: 2rem;
+                margin-top: 3rem;
+            }
+
+            input[type="radio"],
+            input[type="checkbox"] {
+                transform: scale(1.4);
+            }
+
+            label {
+                font-size: 2rem;
+                margin-top: 3rem;
+                display: inline-block;
+                margin-right: 2rem;
+
+                /* Theme */
+
+                &:has(input[value="light"]) span {
+                    background-color: #fff8cc;
+                    color: #8b5e00;
+                }
+
+                &:has(input[value="dark"]) span {
+                    background-color: #111827;
+                    color: #f9fafb;
+                }
+
+                /* Color */
+
+                &:has(input[value="red"]) span {
+                    background-color: #fee2e2;
+                    color: #991b1b;
+                }
+
+                &:has(input[value="blue"]) span {
+                    background-color: #dbeafe;
+                    color: #1d4ed8;
+                }
+
+                &:has(input[value="green"]) span {
+                    background-color: #dcfce7;
+                    color: #166534;
+                }
+
+                /* Language */
+
+                &:has(input[value="vi"]) span {
+                    background-color: #bbf7d0;
+                    color: #166534;
+                }
+
+                &:has(input[value="en"]) span {
+                    background-color: #bfdbfe;
+                    color: #1d4ed8;
+                }
+
+                /* Options */
+
+                &:has(input[value="advanced"]) span {
+                    background-color: #fef3c7;
+                    color: #92400e;
+                }
+
+                &:has(input[value="eco"]) span {
+                    background-color: #bbf7d0;
+                    color: #15803d;
+                }
+
+                &:has(input[value="warning"]) span {
+                    background-color: #fee2e2;
+                    color: #b91c1c;
+                }
+            }
+        }
+
+        /* Result */
+
+        .result {
+            background-color: #f3f4f6;
+
+            p {
+                font-size: 2.5rem;
+                background-color: #fff;
+                padding: 1.5rem;
+            }
+
+            p:not(:first-child) {
+                margin-top: 2.5rem;
+            }
+        }
+
+        .container {
+            width: 100rem;
+            height: 100vh;
+            margin: 0 auto;
+            /* Theme */
+
+            &:has(input[type="radio"][name="theme"]:checked) .result .theme {
+                opacity: 0.5;
+            }
+
+            &:has(input[value="light"]:checked) #light {
+                background-color: #fff8cc;
+                opacity: 1;
+            }
+
+            &:has(input[value="dark"]:checked) #dark {
+                background-color: #111827;
+                color: #f9fafb;
+                opacity: 1;
+            }
+
+            /* Color */
+
+            &:has(input[type="radio"][name="color"]:checked) .result .color {
+                opacity: 0.5;
+            }
+
+            &:has(input[value="red"]:checked) #red {
+                background-color: #fee2e2;
+                color: #991b1b;
+                opacity: 1;
+            }
+
+            &:has(input[value="blue"]:checked) #blue {
+                background-color: #dbeafe;
+                color: #1d4ed8;
+                opacity: 1;
+            }
+
+            &:has(input[value="green"]:checked) #green {
+                background-color: #dcfce7;
+                color: #166534;
+                opacity: 1;
+            }
+
+            /* Language */
+
+            &:has(input[type="radio"][name="language"]:checked) .result .lang {
+                opacity: 0.5;
+            }
+
+            &:has(input[value="vi"]:checked) #vi {
+                background-color: #bbf7d0;
+                color: #166534;
+                opacity: 1;
+            }
+
+            &:has(input[value="en"]:checked) #en {
+                background-color: #bfdbfe;
+                color: #1d4ed8;
+                opacity: 1;
+            }
+
+            /* Options */
+
+            &:has(input[type="checkbox"][name="options"]:checked)
+                .result
+                .options {
+                opacity: 0.5;
+            }
+
+            &:has(input[value="advanced"]:checked) #advanced {
+                background-color: #fef3c7;
+                color: #92400e;
+                opacity: 1;
+            }
+
+            &:has(input[value="eco"]:checked) #eco {
+                background-color: #bbf7d0;
+                color: #15803d;
+                opacity: 1;
+            }
+
+            &:has(input[value="warning"]:checked) #warning {
+                background-color: #fee2e2;
+                color: #b91c1c;
+                opacity: 1;
+            }
+        }
+    </style>
+    <body>
+        <main>
+            <!-- Header -->
+            <header class="header">
+                <h1>Trung tâm cấu hình giao diện (Demo)</h1>
+            </header>
+
+            <!-- Content -->
+            <div class="container">
+                <!-- Control -->
+                <div class="control">
+                    <div class="theme">
+                        <p>Chọn giao diện (Theme):</p>
+                        <label>
+                            <input type="radio" name="theme" value="light" />
+                            <span>Light</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="theme" value="dark" />
+                            <span>Dark</span>
+                        </label>
+                    </div>
+                    <div class="color">
+                        <p>Chọn màu chủ đạo (Color):</p>
+                        <label>
+                            <input type="radio" name="color" value="red" />
+                            <span>Red</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="color" value="blue" />
+                            <span>Blue</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="color" value="green" />
+                            <span>Green</span>
+                        </label>
+                    </div>
+                    <div class="language">
+                        <p>Chọn ngôn ngữ (Language):</p>
+                        <label>
+                            <input type="radio" name="language" value="vi" />
+                            <span>VI</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="language" value="en" />
+                            <span>EN</span>
+                        </label>
+                    </div>
+                    <div class="options">
+                        <p>Tùy chọn bổ sung (Options - Checkbox):</p>
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="options"
+                                value="advanced"
+                            />
+                            <span>Hiển thị mô tả nâng cao</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="options" value="eco" />
+                            <span>Bật chế độ Eco</span>
+                        </label>
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="options"
+                                value="warning"
+                            />
+                            <span>Hiển thị cảnh báo quan trọng</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Result -->
+                <div class="result">
+                    <p id="light" class="theme">
+                        Theme Light: Giao diện sáng chữ đen
+                    </p>
+                    <p id="dark" class="theme">
+                        Theme Dark: Giao diện tối, chữ sáng
+                    </p>
+                    <p id="red" class="color">
+                        Màu Red: được nhấn mạnh khi chọn Red
+                    </p>
+                    <p id="blue" class="color">
+                        Màu Blue: được nhấn mạnh khi chọn Blue
+                    </p>
+                    <p id="green" class="color">
+                        Màu Green: được nhấn mạnh khi chọn Green
+                    </p>
+                    <p id="vi" class="lang">
+                        [VI]Xin chào bạn! Khi chọn VI, dòng này rõ hơn
+                    </p>
+                    <p id="en" class="lang">
+                        [EN]Hello, world! Khi chọn EN, dòng này rõ hơn
+                    </p>
+                    <p id="advanced" class="options">
+                        Mô tả nâng cao: giải thích kỹ hơn về cách các lựa chọn
+                        đang ảnh hướng giao diện
+                    </p>
+                    <p id="eco" class="options">
+                        Chế độ Eco: mô phỏng trạng thái tiết kiệm tài nguyên cho
+                        giao diện
+                    </p>
+                    <p id="warning" class="options">
+                        Cảnh báo quan trọng: khu cực dùng để nhấn mạnh thông tin
+                        hệ thống
+                    </p>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
