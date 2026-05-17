@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact</title>
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/styles.css" />
+
+        <!-- Material Design Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
+        />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Fonts Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <main>
+            <!-- Header -->
+            <header class="header">
+                <!-- Logo -->
+                <p class="logo"><a href="#">Đức Thắng</a></p>
+
+                <!-- Navigation -->
+                <ul>
+                    <li>
+                        <i class="mdi mdi-home"></i>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <i class="mdi mdi-account"></i>
+                        <a href="./about.html">About</a>
+                    </li>
+                    <li>
+                        <i class="mdi mdi-lightbulb"></i>
+                        <a href="./skills.html">Skills</a>
+                    </li>
+                    <li>
+                        <i class="mdi mdi-folder"></i>
+                        <a href="./projects.html">Projects</a>
+                    </li>
+                    <li>
+                        <i class="mdi mdi-note-text"></i>
+                        <a href="./blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <i class="mdi mdi-email"></i>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Setting -->
+                <div class="setting">
+                    <a href="#!"><i class="fa-solid fa-gear"></i></a>
+                </div>
+            </header>
+
+            <!-- Contact -->
+            <div class="contact-title">
+                <h1>Kết Nối Với Tôi</h1>
+                <p class="desc">
+                    Bạn có ý tưởng tuyệt vời hoặc dự án đầy thách thức? Hãy để lại tin
+                    nhắn, tôi sẽ phản hồi <br />
+                    trong vòng 24 giờ làm việc.
+                </p>
+            </div>
+
+            <div class="contact">
+                <div class="contact-content">
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Họ tên *</label>
+                                <input
+                                    id="name"
+                                    type="text"
+                                    placeholder="Nguyễn Văn A"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input
+                                    id="email"
+                                    type="email"
+                                    placeholder="name@example.com"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Số điện thoại</label>
+                                <input
+                                    id="phone"
+                                    type="tel"
+                                    placeholder="0901234567"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="topic">Chủ đề</label>
+                                <select id="topic">
+                                    <option>Hỏi về dự án</option>
+                                    <option>Hợp tác công việc</option>
+                                    <option>Tư vấn thiết kế</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-radio">
+                            <label>Mức độ ưu tiên</label>
+                            <div class="form-options">
+                                <label><input type="radio" name="priority" /> Thấp</label>
+                                <label
+                                    ><input
+                                        type="radio"
+                                        name="priority"
+                                        checked
+                                    />
+                                    Trung bình</label
+                                >
+                                <label><input type="radio" name="priority" /> Cao</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-checkbox">
+                            <label>Dịch vụ quan tâm</label>
+                            <div class="form-options">
+                                <label><input type="checkbox" /> Web Dev</label>
+                                <label><input type="checkbox" /> Mobile App</label>
+                                <label><input type="checkbox" /> UI/UX</label>
+                                <label><input type="checkbox" /> Consulting</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Tin nhắn *</label>
+                            <textarea
+                                id="message"
+                                placeholder="Hãy mô tả chi tiết yêu cầu của bạn..."
+                            ></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="rating">
+                                Đánh giá mức độ hài lòng về Portfolio (1-5 sao)
+                            </label>
+                            <input id="rating" type="range" min="1" max="5" value="5" />
+                            <div class="range-note">
+                                <span>Rất tệ</span>
+                                <span>Tuyệt vời</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="file">Tài liệu đính kèm (PDF, DOC, DOCX)</label>
+                            <input id="file" type="file" />
+                        </div>
+
+                        <label class="agree">
+                            <input type="checkbox" />
+                            Tôi đồng ý với các điều khoản bảo mật và cho phép lưu trữ
+                            thông tin liên hệ này.
+                        </label>
+
+                        <div class="contact-button">
+                            <button type="submit">Gửi tin nhắn</button>
+                            <button type="reset">Xóa form</button>
+                        </div>
+                    </form>
+
+                    <div class="contact-sidebar">
+                        <div class="contact-card">
+                            <h2>Thông tin liên hệ</h2>
+                            <div class="contact-list">
+                                <div class="contact-item">
+                                    <i class="fa-regular fa-envelope"></i>
+                                    <div>
+                                        <h3>Email</h3>
+                                        <p>contact@portfolio.com</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <div>
+                                        <h3>Điện thoại</h3>
+                                        <p>+84 901 234 567</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <div>
+                                        <h3>Địa chỉ</h3>
+                                        <p>
+                                            Tòa nhà Innovation, Công viên phần mềm
+                                            Quang Trung, Quận 12, TP. Hồ Chí Minh
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-social">
+                                <h3>Mạng xã hội</h3>
+                                <div class="social-list">
+                                    <a href="#!"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="#!"><i class="fa-brands fa-linkedin"></i></a>
+                                    <a href="#!"><i class="fa-solid fa-link"></i></a>
+                                    <a href="#!"><i class="fa-solid fa-code"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="working-card">
+                            <h2>Giờ làm việc</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Thứ</th>
+                                        <th>Giờ làm việc</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Thứ Hai - Thứ Sáu</td>
+                                        <td>08:00 - 17:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Thứ Bảy</td>
+                                        <td>08:00 - 12:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chủ Nhật</td>
+                                        <td class="closed">Nghỉ</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map">
+                <iframe
+                    title="Bản đồ"
+                    src="https://www.google.com/maps?q=C%C3%B4ng%20vi%C3%AAn%20ph%E1%BA%A7n%20m%E1%BB%81m%20Quang%20Trung&output=embed"
+                    loading="lazy"
+                ></iframe>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="copyright">
+                        <p class="logo">Đức Thắng</p>
+                        <p class="desc">© 2024 Portfolio. Built with precision.</p>
+                    </div>
+                    <div class="media">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-github"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="#" class="up-top"
+                        ><i class="fa-solid fa-arrow-up"></i
+                    ></a>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

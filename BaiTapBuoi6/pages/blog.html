@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Blog</title>
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/styles.css" />
+
+        <!-- Material Design Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
+        />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Fonts Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <main>
+            <!-- Header -->
+            <header class="header">
+                <!-- Logo -->
+                <p class="logo"><a href="#">Đức Thắng</a></p>
+
+                <!-- Navigation -->
+                <ul>
+                    <li>
+                        <i class="mdi mdi-home"></i>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <i class="mdi mdi-account"></i>
+                        <a href="./about.html">About</a>
+                    </li>
+                    <li>
+                        <i class="mdi mdi-lightbulb"></i>
+                        <a href="./skills.html">Skills</a>
+                    </li>
+                    <li>
+                        <i class="mdi mdi-folder"></i>
+                        <a href="./projects.html">Projects</a>
+                    </li>
+                    <li>
+                        <i class="mdi mdi-note-text"></i>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <i class="mdi mdi-email"></i>
+                        <a href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Setting -->
+                <div class="setting">
+                    <a href="#!"><i class="fa-solid fa-gear"></i></a>
+                </div>
+            </header>
+
+            <!-- Blog -->
+            <div class="blog-detail">
+                <div class="blog-detail-content">
+                    <div class="breadcrumb">
+                        <a href="../index.html">Home</a>
+                        <span>/</span>
+                        <a href="#">Blog</a>
+                        <span>/</span>
+                        <p>Performance</p>
+                    </div>
+
+                    <h1>
+                        Tối ưu hóa Performance Website: Nghệ thuật của Tốc độ và
+                        Trải nghiệm người dùng
+                    </h1>
+
+                    <div class="blog-author">
+                        <img src="../images/avatar.jpg" alt="" />
+                        <div class="blog-author-info">
+                            <p class="name">Nguyễn Đức Thắng</p>
+                            <p class="date">Ngày đăng: 16/11/2024</p>
+                        </div>
+                        <p class="category">Engineering</p>
+                    </div>
+
+                    <img
+                        class="blog-cover"
+                        src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80"
+                        alt=""
+                    />
+
+                    <div class="table-of-content">
+                        <h2>Mục lục</h2>
+                        <a href="#overview">Tổng quan về Performance</a>
+                        <a href="#image">Kỹ thuật nén và tối ưu hình ảnh</a>
+                        <a href="#split">Code Splitting và Lazy Loading</a>
+                        <a href="#cache">Chiến lược Caching hiệu quả</a>
+                        <a href="#measure">Đo lường và Kiểm thử</a>
+                    </div>
+
+                    <div class="blog-article">
+                        <section id="overview">
+                            <p>
+                                Trong kỷ nguyên số hóa hiện nay, <strong>tốc độ tải
+                                trang</strong> không chỉ là một yếu tố kỹ thuật mà còn
+                                là khóa then chốt cho sự thành công của một sản phẩm.
+                                Người dùng hiện đại không thông cảm với những trang web
+                                ì ạch và chậm chạp. <em>Tối ưu hóa performance</em> là
+                                quá trình liên tục đòi hỏi sự kết hợp giữa tư duy hệ
+                                thống và các kỹ thuật lập trình tinh tế để mang lại trải
+                                nghiệm mượt mà nhất.
+                            </p>
+                            <p>
+                                Để bắt đầu, chúng ta cần hiểu rõ các chỉ số
+                                <mark>Core Web Vitals</mark> của Google. Các chỉ số này
+                                tập trung vào tốc độ tải, khả năng tương tác và sự ổn
+                                định của hình ảnh. Việc cải thiện chúng chỉ có ý nghĩa
+                                khi đồng thời giúp người dùng cảm thấy trang web của bạn
+                                phản hồi nhanh hơn.
+                            </p>
+                        </section>
+
+                        <section id="image">
+                            <h2>Kỹ thuật nén và tối ưu hình ảnh</h2>
+                            <p>
+                                Hình ảnh thường chiếm hơn 60% tổng dung lượng tải của một
+                                trang web. Sử dụng các định dạng hiện đại như WebP hoặc
+                                AVIF thay cho PNG/JPG truyền thống có thể giảm dung lượng
+                                tới 50-70% mà không làm giảm chất lượng hiển thị đáng kể.
+                            </p>
+                            <pre><code>// Ví dụ sử dụng Lazy Loading cho hình ảnh trong React
+&lt;img
+    src="hero.webp"
+    loading="lazy"
+    alt="Performance graph"
+    decoding="async"
+/&gt;</code></pre>
+                        </section>
+
+                        <section id="split">
+                            <h2>Code Splitting và Lazy Loading</h2>
+                            <p>
+                                Việc tải một file JavaScript khổng lồ ngay từ đầu là
+                                nguyên nhân chính dẫn đến hiện tượng Main-thread
+                                blocking. Bằng cách áp dụng Code Splitting, chúng ta chỉ
+                                nạp những "chunks" cần thiết cho trang hiện tại. Điều
+                                này cực kỳ quan trọng đối với các ứng dụng Single Page
+                                Application.
+                            </p>
+                            <p>
+                                Hãy nhớ rằng công cụ build hiện đại như Webpack hoặc Vite
+                                đều hỗ trợ dynamic import. Kết quả output mong muốn là
+                                thời gian phản hồi nhanh hơn và lượng JavaScript khởi
+                                động ban đầu nhỏ hơn.
+                            </p>
+                            <pre class="light-code"><code>[Vite] hmr update /src/App.tsx
+[Vite] bundle generated in 45ms</code></pre>
+                            <blockquote>
+                                "Tốc độ là một tính năng. Nếu ứng dụng của bạn không
+                                nhanh, người dùng sẽ coi đó là một lỗi hệ thống."
+                                <cite>Jeff Atwood</cite>
+                            </blockquote>
+                        </section>
+
+                        <section id="cache">
+                            <h2>Chiến lược Caching hiệu quả</h2>
+                            <p>
+                                Sử dụng Service Workers để triển khai các chiến lược
+                                caching như <code>Stale-while-revalidate</code> cho phép
+                                ứng dụng của bạn hoạt động ngay cả khi offline hoặc trong
+                                điều kiện mạng yếu. Đây là nền tảng của Progressive Web
+                                Apps (PWA).
+                            </p>
+                            <pre><code>// Đăng ký Service Worker cơ bản
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () =&gt; {
+        navigator.serviceWorker.register("/sw.js");
+    });
+}</code></pre>
+                        </section>
+
+                        <section id="measure">
+                            <h2>Đo lường và Kiểm thử</h2>
+                            <p>
+                                Đừng bao giờ tối ưu hóa dựa trên cảm giác. Hãy sử dụng
+                                các công cụ như Lighthouse, PageSpeed Insights hoặc
+                                WebPageTest để đo lường những nút thắt hiệu năng thực tế,
+                                rồi kiểm tra lại sau mỗi lần thay đổi.
+                            </p>
+                        </section>
+                    </div>
+
+                    <a class="back-to-top" href="#">Lên đầu trang</a>
+
+                    <div class="references">
+                        <h2>Tài liệu tham khảo</h2>
+                        <ul>
+                            <li>Web Vitals Documentation - web.dev/vitals</li>
+                            <li>High Performance Browser Networking by Ilya Grigorik</li>
+                            <li>Image Optimization Guide - Next.js Docs</li>
+                        </ul>
+                    </div>
+
+                    <div class="author-card">
+                        <img src="../images/avatar.jpg" alt="" />
+                        <div class="author-card-info">
+                            <h2>Nguyễn Đức Thắng</h2>
+                            <p>
+                                Full-stack Developer với hơn 5 năm kinh nghiệm trong việc
+                                xây dựng các ứng dụng web hiệu năng cao. Đam mê tối ưu hóa
+                                mã nguồn và chia sẻ kiến thức kỹ thuật.
+                            </p>
+                            <div class="author-social">
+                                <a href="#!"><i class="fa-brands fa-github"></i></a>
+                                <a href="#!"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#!"><i class="fa-solid fa-globe"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="copyright">
+                        <p class="logo">Đức Thắng</p>
+                        <p class="desc">© 2024 Portfolio. Built with precision.</p>
+                    </div>
+                    <div class="media">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-github"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="#" class="up-top"
+                        ><i class="fa-solid fa-arrow-up"></i
+                    ></a>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
